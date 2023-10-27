@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Estudiantes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <style>
+        body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+        }
+
+    header {
+    background-color: #c4df75;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    }
+
+    h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color:  black;
+    }
+
+    nav {
+    display: flex;
+    justify-content: center;
+    }
+
+    a {
+    color: #000000;
+    text-decoration: none;
+    }
+
+    main {
+    padding: 20px;
+    }
+
+    section {
+    margin-top: 20px;
+    text-align: center;
+    }
+
+    h2 {
+    font-size: 30px;
+    }
+
+    p {
+    font-size: 20px;
+    }
+
+    a {
+    font-size: 20px;
+    }
+    section{
+        padding: 5rem;
+    }
+    tr{
+        font-weight: bold;
+    }
+
+
+    </style>
+<body>
+   <header class="bg-success p-3 text-center text-light mb-5">
+        <h1>Lista de Estudiantes</h1>
+   </header>
+   <section>
+        <table class="table table-striped" >
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Curso</th>
+                    <th>Examen Final</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="estudiante : ${estudiantes}">
+                    <td th:text="${estudiante.codigo}"></td>
+                    <td th:text="${estudiante.nombre}"></td>
+                    <td th:text="${estudiante.curso}"></td>
+                    <td th:text="${estudiante.examenFinal}"></td>
+                    <td>
+                        <i class="fas fa-trash-alt" style="color: red;"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   </section>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Maqueta de producto</title>
+</head>
+<style>
+    body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+    }
+
+header {
+  background-color: #c4df75;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color:  black;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  font-size: 20px;
+}
+section{
+    padding: 5rem;
+}
+
+
+
+  </style>
+<body>
+    <header>
+        <h1>Detalle del Producto</h1>
+    </header>
+    <br>
+    <br>
+    <section >
+        <ul>
+          <p>Código: <span th:text="${producto.codigo}"></span></p>
+          <p>Nombre: <span th:text="${producto.nombre}"></span></p>
+          <p>Precio: <span th:text="${producto.precio}"></span></p>
+          <p>Cantidad: <span th:text="${producto.cantidad}"></span></p>
+        </ul>
+    </section>
+</body>
+</html>

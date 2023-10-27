@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primnario: #ffC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --gris-claro: #DFE9F3;
+
+    --fuente-principal: 3.8rem;
+}
+
+/* globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--gris-claro) 0%, var(--blanco));
+
+    /* 1 rem = 10px */
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .boton {
+        width: auto;
+    }
+
+}
+
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* tipo grafia*/
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+/* titulos */
+
+.titulo span {
+    font-size: 2rem;
+}
+
+
+/* navegacion principal */
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 480px) {}
+
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+    }
+
+}
+
+@media (min-width: 1400px) {}
+
+.navegacion-principal a:hover {
+    background-color: #ffC107;
+    color: var(--negro);
+
+}
+
+.hero {
+    background-image: url(../templates/img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    /**Anterior **/
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+
+.contenido-hero.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+
+    }
+}
+
+
+
+    </style>
+    <title>Inicio</title> 
+</head>
+<body> <!--No se porque no visualiza en la imagen-->
+    <header>
+        <h1 class="titulo">David Sanchez 
+        <span>Full Stack</span> </h1> <!--No es codigo reciclado este es mi proyecto q he estado avanzando-->
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>  
+            <a href="#">Notas</a>
+            <a href="#">Sobre mi</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2>Desarrollo web en PHP
+                <br>
+            <span> Conocimientos Amplios Sistemas de Ventas 
+                <br>
+                y Gestores de Archivos</span></h2>
+            <div class="ubicacion">
+                <p>Lima, Peru</p>
+            </div>
+            <a  class="boton" href="#">Contactar</a>        
+        </div>   <!--.contenido-hero-->  
+    </section>
+
+</body>
+</html>
